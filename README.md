@@ -6,3 +6,5 @@
 所以打算基础篇暂时告一段落后，用eclipse继续新的内容。
 
 ## Java泛型
+
+[Java泛型](https://github.com/Junglelk/Java_Programming_Comprehensive/blob/Generic/Java%E6%B3%9B%E5%9E%8B.md)
