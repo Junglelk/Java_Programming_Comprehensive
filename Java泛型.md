@@ -1,79 +1,77 @@
-# ·ºĞÍ*Generic*
+# æ³›å‹*Generic*
 
-·ºĞÍ¿ÉÒÔ²ÎÊı»¯ÀàĞÍ¡£ÓÅµãÊÇ¿ÉÒÔÔÚ±àÒëÊ±¶ø²»ÊÇÔËĞĞÊ±¼ì²â³ö´íÎó¡£
-´ÓJDK1.5¿ªÊ¼ÔÊĞí¶¨Òå·ºĞÍÀà¡¢·ºĞÍ½Ó¿Ú¡¢·ºĞÍ·½·¨¡£
+æ³›å‹å¯ä»¥å‚æ•°åŒ–ç±»å‹ã€‚ä¼˜ç‚¹æ˜¯å¯ä»¥åœ¨ç¼–è¯‘æ—¶è€Œä¸æ˜¯è¿è¡Œæ—¶æ£€æµ‹å‡ºé”™è¯¯ã€‚
+ä»JDK1.5å¼€å§‹å…è®¸å®šä¹‰æ³›å‹ç±»ã€æ³›å‹æ¥å£ã€æ³›å‹æ–¹æ³•ã€‚
 
-## ·ºĞÍÀà¡¢½Ó¿Ú
+## æ³›å‹ç±»ã€æ¥å£
 
 ```java
 package java.lang
 public interface Comparable<T>{
-	public int compareTo(T o)
-}//·ºĞÍ½Ó¿Ú
-//<T>±íÊ¾ĞÎÊ½·ºĞÍÀàĞÍ
+    public int compareTo(T o)
+}//æ³›å‹æ¥å£
+//<T>è¡¨ç¤ºå½¢å¼æ³›å‹ç±»å‹
 ```
 
-*ĞÎÊ½·ºĞÍÀàĞÍ*¿ÉÒÔÓÃ*Êµ¼Ê¾ßÌåÀàĞÍ*Ìæ»»£¬Ìæ»»·ºĞÍÀàĞÍ³ÆÎª*·ºĞÍÊµÀı»¯*¡£
+*å½¢å¼æ³›å‹ç±»å‹*å¯ä»¥ç”¨*å®é™…å…·ä½“ç±»å‹*æ›¿æ¢ï¼Œæ›¿æ¢æ³›å‹ç±»å‹ç§°ä¸º*æ³›å‹å®ä¾‹åŒ–*ã€‚
 
 ```java
 ArrayList<String> list = new ArrayList<>();
 ```
 
-ÉÏÊö´úÂë²úÉúÒ»¸ö×Ö·û´®µÄÏßĞÔ±í£¬listÄÚÖ»ÄÜÌí¼Ó×Ö·û´®£¬·ñÔò»á²úÉú±àÒë´íÎó¡£
-·ºĞÍÀàĞÍÖ»ÄÜÊÇÒıÓÃĞÍ£¬²»ÄÜÊÇint,double»òcharÕâÀà»ù±¾ÀàĞÍÌæ»»·ºĞÍÀàĞÍ¡£
+ä¸Šè¿°ä»£ç äº§ç”Ÿä¸€ä¸ªå­—ç¬¦ä¸²çš„çº¿æ€§è¡¨ï¼Œlistå†…åªèƒ½æ·»åŠ å­—ç¬¦ä¸²ï¼Œå¦åˆ™ä¼šäº§ç”Ÿç¼–è¯‘é”™è¯¯ã€‚
+æ³›å‹ç±»å‹åªèƒ½æ˜¯å¼•ç”¨å‹ï¼Œä¸èƒ½æ˜¯int,doubleæˆ–charè¿™ç±»åŸºæœ¬ç±»å‹æ›¿æ¢æ³›å‹ç±»å‹ã€‚
 
-## ·ºĞÍ·½·¨
+## æ³›å‹æ–¹æ³•
 
-·ºĞÍ·½·¨ÉùÃ÷
+æ³›å‹æ–¹æ³•å£°æ˜
 
 ```java
-public static <E> ·µ»ØÀàĞÍ ·½·¨Ãû{
+public static <E> è¿”å›ç±»å‹ æ–¹æ³•å{
 
 }
 ```
 
-µ÷ÓÃ
+è°ƒç”¨
 
 ```java
-ÀàÃû.<E>·ºĞÍ·½·¨Ãû(±äÁ¿);
-//»ò
-·ºĞÍ·½·¨Ãû (±äÁ¿);
+ç±»å.<E>æ³›å‹æ–¹æ³•å(å˜é‡);
+//æˆ–
+æ³›å‹æ–¹æ³•å (å˜é‡);
 ```
 
-ÀıÈç£º
+ä¾‹å¦‚ï¼š
 
 ```java
 public class GenericMethodDemo {
 
-	public static void main(String[] args) {
-		Integer[] integers = {1,2,3,4,5,6,7};
-		String[]  strings  = {"red","blue","black","yellow","pink"};
-		/*
-		 * ´Ë´¦Ò²¿ÉÒÔÖ±½ÓÓÃ
-		 * print(integers);
-		 * print(string);
-		 */
-		GenericMethodDemo.<Integer>print(integers);
-		GenericMethodDemo.<String>print(strings);
-	}
-	
-	public static <E> void print(E[] list) {
-		for(int i = 0;i<list.length;i++) {
-			System.out.print(list[i]+" ");
-		}
-		System.out.println();
-	}
+    public static void main(String[] args) {
+        Integer[] integers = {1,2,3,4,5,6,7};
+        String[]  strings  = {"red","blue","black","yellow","pink"};
+        /*
+         * æ­¤å¤„ä¹Ÿå¯ä»¥ç›´æ¥ç”¨
+         * print(integers);
+         * print(string);
+         */
+        GenericMethodDemo.<Integer>print(integers);
+        GenericMethodDemo.<String>print(strings);
+    }
+
+    public static <E> void print(E[] list) {
+        for(int i = 0;i<list.length;i++) {
+            System.out.print(list[i]+" ");
+        }
+        System.out.println();
+    }
 }
 ```
 
-*ÊÜÏŞµÄ* ·ºĞÍÀàĞÍ
+*å—é™çš„* æ³›å‹ç±»å‹
 
 ```java
 public static <E extends GeometricObject> boolean equalArea(E object1 , E object2){
-	//´ËÊ±µÄ·ºĞÍÖ»ÄÜÊÇGeometricµÄ×ÓÀàĞÍ
+    //æ­¤æ—¶çš„æ³›å‹åªèƒ½æ˜¯Geometricçš„å­ç±»å‹
 }
 ```
 
-ÌâÍâ»°£¬Ğ´µ½Õâ·¢ÏÖ±¾ÕÂËÆºõÃ»ÓĞJavaFXµÄÄÚÈİ...
-
-
+é¢˜å¤–è¯ï¼Œå†™åˆ°è¿™å‘ç°æœ¬ç« ä¼¼ä¹æ²¡æœ‰JavaFXçš„å†…å®¹...
