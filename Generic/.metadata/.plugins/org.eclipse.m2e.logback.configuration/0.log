@@ -2,3 +2,47 @@
 2020-05-08 16:49:48,484 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2020-05-08 16:51:40,699 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2020-05-08 21:09:29,965 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-05-08 22:35:47,679 [Worker-20: Checking out Java_Programming_Comprehensive - master] ERROR o.e.m.c.i.p.r.ProjectRegistryReader - Can't write workspace state
+java.io.FileNotFoundException: C:\Users\Jungle\Documents\Java_Programming_Comprehensive\Generic\.metadata\.plugins\org.eclipse.m2e.core\workspaceState.ser (系统找不到指定的路径。)
+	at java.base/java.io.FileOutputStream.open0(Native Method) ~[na:na]
+	at java.base/java.io.FileOutputStream.open(Unknown Source) ~[na:na]
+	at java.base/java.io.FileOutputStream.<init>(Unknown Source) ~[na:na]
+	at java.base/java.io.FileOutputStream.<init>(Unknown Source) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryReader.writeWorkspaceState(ProjectRegistryReader.java:128) ~[org.eclipse.m2e.core_1.14.0.20191209-1925.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.writeWorkspaceState(ProjectRegistryManager.java:990) [org.eclipse.m2e.core_1.14.0.20191209-1925.jar:na]
+	at org.eclipse.m2e.core.internal.MavenPluginActivator$1.saving(MavenPluginActivator.java:147) [org.eclipse.m2e.core_1.14.0.20191209-1925.jar:na]
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:387) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:204) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.10.600.v20191004-1420.jar:na]
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:207) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1164) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.internal.resources.Project.close(Project.java:197) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.egit.core.op.BranchOperation$1.closeProjectsMissingAfterCheckout(BranchOperation.java:197) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.op.BranchOperation$1.checkoutRepository(BranchOperation.java:158) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.core.op.BranchOperation$1.run(BranchOperation.java:137) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.egit.core.op.BranchOperation.execute(BranchOperation.java:233) [org.eclipse.egit.core_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.ui.internal.branch.BranchOperationUI.doCheckout(BranchOperationUI.java:197) [org.eclipse.egit.ui_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.ui.internal.branch.BranchOperationUI.access$2(BranchOperationUI.java:188) [org.eclipse.egit.ui_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.egit.ui.internal.branch.BranchOperationUI$CheckoutJob.run(BranchOperationUI.java:262) [org.eclipse.egit.ui_5.6.0.201912101111-r.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.600.v20191122-2104.jar:na]
+2020-05-08 22:35:58,815 [Worker-17: 定期工作空间保存。] ERROR o.e.m.c.i.p.r.ProjectRegistryReader - Can't write workspace state
+java.io.FileNotFoundException: C:\Users\Jungle\Documents\Java_Programming_Comprehensive\Generic\.metadata\.plugins\org.eclipse.m2e.core\workspaceState.ser (系统找不到指定的路径。)
+	at java.base/java.io.FileOutputStream.open0(Native Method) ~[na:na]
+	at java.base/java.io.FileOutputStream.open(Unknown Source) ~[na:na]
+	at java.base/java.io.FileOutputStream.<init>(Unknown Source) ~[na:na]
+	at java.base/java.io.FileOutputStream.<init>(Unknown Source) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryReader.writeWorkspaceState(ProjectRegistryReader.java:128) ~[org.eclipse.m2e.core_1.14.0.20191209-1925.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.writeWorkspaceState(ProjectRegistryManager.java:990) [org.eclipse.m2e.core_1.14.0.20191209-1925.jar:na]
+	at org.eclipse.m2e.core.internal.MavenPluginActivator$1.saving(MavenPluginActivator.java:147) [org.eclipse.m2e.core_1.14.0.20191209-1925.jar:na]
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:387) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:204) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.10.600.v20191004-1420.jar:na]
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:207) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1164) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.600.v20191122-2104.jar:na]
+2020-05-09 07:50:56,798 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
