@@ -75,3 +75,63 @@ public static <E extends GeometricObject> boolean equalArea(E object1 , E object
 ```
 
 题外话，写到这发现本章似乎没有JavaFX的内容...
+
+## 通配泛型
+
+非受限通配、受限通配和下限通配。
+
+* 非受限通配
+  * <\?> 相当于<? extends Object>
+* 受限通配
+  * <\? extends T>，表示T或T的子类
+  
+ ```java
+  public class WildCardNeedDemo {
+
+    public static void main(String[] args) {
+        GenericStack<Integer> intStack = new GenericStack<>();
+
+        intStack.push(1);
+        intStack.push(7);
+        intStack.push(5);
+        intStack.push(-5);
+
+        System.out.print("最大数为："+max(intStack));
+
+    }
+//意指传入的类型为Number的子类即可
+    public static double  max(GenericStack<? extends Number> stack) {
+        double max = stack.pop().doubleValue();
+        while (!stack.isEmpty()) {
+            double value = stack.pop().doubleValue();
+            if(value>max) max = value;
+        }
+
+        return max;
+    }
+
+}
+```
+
+* 下限通配
+  * <\? super T>, 表示T或T的一个父类。
+
+```java
+public class SuperWildCardDemo {
+
+    public static void main(String[] args) {
+        GenericStack<String> stack1 = new GenericStack<>();
+        GenericStack<Object> stack2 = new GenericStack<>();
+        stack2.push("Java");
+        stack2.push(2);
+        stack1.push("sun");
+        add(stack1,stack2);
+        AnyWildCardDemo.print(stack2);
+    }
+    public static <T>void add(GenericStack<T> stack1 , GenericStack<? super T> stack2) {
+        while (!stack1.isEmpty()) {
+            stack2.push(stack1.pop());
+        }
+    }
+}
+```
