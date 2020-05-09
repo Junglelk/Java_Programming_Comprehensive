@@ -8,6 +8,10 @@ public class GenericStack<E> {
 		return list.size();
 	}
 	
+	public void push(E o) {
+		list.add(o);
+	}
+	
 	public E peek() {
 		return list.get(getSize()-1);
 	}
