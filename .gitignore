@@ -1,6 +1,6 @@
 # Compiled class file
 *.class
-
+Generic/.metadata/
 # Log file
 *.log
 
@@ -19,7 +19,7 @@
 *.tar.gz
 *.rar
 hs_err_pid*
-/.metadata/
+.metadata/
 /bin/
 *.project
 *.classpath
