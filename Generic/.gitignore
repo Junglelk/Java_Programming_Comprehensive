@@ -1,7 +1,6 @@
-/.metadata/
 # Compiled class file
 *.class
-
+.metadata
 # Log file
 *.log
 
